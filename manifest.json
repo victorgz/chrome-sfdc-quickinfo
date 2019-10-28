@@ -1,0 +1,28 @@
+{
+	"name": "SFDC Quick Info",
+	"short_name": "SFDC QuickInfo",
+	"version": "1.4",
+	"description": "Capture specific SFDC data. Extension developed by Victor Garcia Zarco & Pablo Camprubi",
+	"permissions": ["https://xxx.lightning.force.com/lightning/r/Lead/*", "declarativeContent", "storage"],
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	"content_scripts": [
+    {
+      "matches": ["http://www.google.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  	],
+	"page_action": {
+		"default_popup": "popup.html",
+		"default_icon": {
+	        "128": "lead_120.png"
+	      }
+	},
+	"icons": {
+        "128": "lead_120.png"
+      },
+	"manifest_version": 2
+}
