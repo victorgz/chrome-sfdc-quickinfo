@@ -1,7 +1,7 @@
 {
 	"name": "SFDC Quick Info",
 	"short_name": "SFDC QuickInfo",
-	"version": "1.4",
+	"version": "1.0",
 	"description": "Capture specific SFDC data. Extension developed by Victor Garcia Zarco & Pablo Camprubi",
 	"permissions": ["declarativeContent", "storage", "<all_urls>"],
 	"background": {
