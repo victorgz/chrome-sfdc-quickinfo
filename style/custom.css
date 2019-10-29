@@ -1,0 +1,40 @@
+body{
+	width: 400px;
+}
+
+#content{
+	width: 100%;
+	margin: 5%;
+}
+
+button {
+  width: 100px;
+  outline: none;
+}
+
+.buttons-group{
+	text-align: center !important;
+}
+
+a{
+	color: grey;
+	text-decoration: none;
+}
+
+a:visited{
+	color: grey;
+}
+
+p{
+	font-size: 12px !important;
+}
+
+#copiedText{
+	font-size: 12px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0;
+}

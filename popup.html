@@ -1,48 +1,30 @@
 <html>
 	<!-- Developed by Victor Garcia & Pablo Camprubi -->
-	<style>
-		body{
-			width: 400px;
-		}
-		#content{
-			width: 100%;
-			margin: 5%;
-		}
-        button {
-          width: 100px;
-          outline: none;
-          margin-left: 5%;
-        }
-        #btnGetLeadData{
-        	position: absolute;
-        	max-width: 20px;
-        	top: 2%;
-        	right: 5%;
-        }
-
-        a{
-        	color: grey;
-        	text-decoration: none;
-        }
-
-        a:visited{
-        	color: grey;
-        }
-      </style>
+	<head>
+		<link href="style/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link href="style/custom.css" rel="stylesheet" media="screen">	
+	</head>
 	<body>
-		<img id="btnGetLeadData"src="sync.png">
+		<div class="container-fluid p-3">
+			
 
-		<h3>Partner Leads Helper</h3>
-		<p style="color: grey;">Developed by <a href="https://www.linkedin.com/in/victorgarciazarco/" target="_blank">Victor Garcia</a> & <a href="https://www.linkedin.com/in/pablocamprubi" target="_blank">Pablo Camprubi</a></p>
+			<h5>SF Quick Info</h5>
+			<p style="color: grey;">Developed by <a href="https://www.linkedin.com/in/victorgarciazarco/" target="_blank">Victor Garcia</a> & <a href="https://www.linkedin.com/in/pablocamprubi" target="_blank">Pablo Camprubi</a></p>
 
-		<div id="content"></div>
-		
-		<button type="button" style="display: none" id="btnCopy">Copy</button>
-		<p id="copiedText" style="display:none; color: green">Text copied to clipboard!</p>
-		
-		<div id="hidden" style="display:none"></div>
-		
-		<script src="popup.js"></script>
+			<div id="content"></div>
+			
+			<div class="buttons-group">
+				<button type="button" style="display: none" id="btnCopy" class="btn btn-primary btn-sm">Copy</button>
+				<button type="button" id="btnGetLeadData" class="btn btn-light btn-sm">Refresh</button>
+				<div class="alert alert-success" role="alert" id="copiedText" style="display:none;" class="mt-3">
+					Text copied to clipboard!
+				</div>
+			</div>
+
+			<div id="hidden" style="display:none"></div>
+			
+			<script src="popup.js"></script>
+		</div>
 
 	</body>
 </html>
