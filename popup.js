@@ -4,11 +4,6 @@ var contentDiv = document.getElementById("content"); // Div used to append the f
 var content; // Variable containing all the fields (label + value) that will be copied into the clipboard
 
 function reload(){
-	//var htmlValue = document.getElementsByClassName("slds-page-header__title")[0].innerText;
-	//var storedLegal = chrome.storage.local.get('leadData', function (items) {});
-
-	//alert(storedLegal);
-
 	var getHtmlValue = 'document.getElementsByClassName("windowViewMode-normal active")[0].getElementsByClassName("slds-page-header__title")[0].innerText';
 	chrome.tabs.getSelected(null, function(tab) {
 	  chrome.tabs.executeScript(tab.id, {code: getHtmlValue}, function(response){
@@ -18,7 +13,6 @@ function reload(){
 
 	chrome.tabs.getSelected(null, function(tab) {
 	  var code = 'window.location.reload();';
-	  //chrome.tabs.executeScript(tab.id, {code: code});
 	});
 
 	getLeadData();
@@ -27,12 +21,6 @@ function reload(){
 function getLeadData(){
 		console.log("Starting process..");
 		cleanLeadData();
-		/*
-		chrome.storage.local.get('leadData', function(items){
-			console.log(items.leadData);
-			cleanLeadData();
-		});
-		*/
 
 		// Launch a script to capture data from Salesforce lead + store this data into a variable
 		chrome.tabs.executeScript(null, {file: "content.js"}, function(response){
@@ -105,7 +93,7 @@ function hideCopyButton(){
 /* Displays the button */
 function showCopyButton(){
 	var x = document.getElementById("btnCopy");
-	x.style.display = "none";
+	x.style.display = "inline-block";
 }
 
 getLeadData();
